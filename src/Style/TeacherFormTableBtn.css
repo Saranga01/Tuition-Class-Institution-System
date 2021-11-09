@@ -1,0 +1,37 @@
+
+.table-view{
+    -fx-background-color:white;
+    -fx-border-color:black;
+    -fx-border-width: 0.2;
+}
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+.table-view .column-header {
+    -fx-background-color:  #2d3436;
+    -fx-pref-height:40;
+    -fx-border-width: 0 0.3 0 0.3 ;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: white;
+    -fx-font-size: 10pt;
+}
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+.table-view:focused{
+    -fx-background-insets: 0px;
+}
+
+.table-view .table-row-cell:empty{
+    -fx-background-color: white;
+}
+.table-view .table-row-cell:selected{
+    -fx-background-color:#bdc3c7;
+}
+.button{
+    -fx-background-color: skyblue;
+    -fx-background-radius: 20;
+    -fx-text-fill: #ffffff;
+}

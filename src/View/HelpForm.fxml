@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane prefHeight="883.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HelpController">
+    <children>
+        <AnchorPane prefHeight="883.0" prefWidth="1160.0">
+            <children>
+                <ScrollPane fx:id="ScrollPane" prefHeight="1000.0" prefWidth="1160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                        <AnchorPane fx:id="ScrollAnchorPane" minHeight="0.0" minWidth="0.0" onMouseClicked="#RootMainAnchorPaneOnClicked" prefHeight="1000.0" prefWidth="1160.0">
+                            <children>
+                                <AnchorPane layoutX="1.0" layoutY="70.0" opacity="0.87" prefHeight="42.0" prefWidth="1143.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="70.0">
+                                    <children>
+                                        <Button layoutX="518.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="26.0" style="-fx-background-color: ffffff;" />
+                                        <Button layoutX="1076.0" layoutY="-1.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="41.0" prefWidth="57.0" style="-fx-background-color: ffffff;">
+                                            <graphic>
+                                                <ImageView fitHeight="31.0" fitWidth="40.0" opacity="0.81">
+                                                    <image>
+                                                        <Image url="@../Image/icons8-services-80.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Label layoutX="68.0" layoutY="2.0" opacity="0.6" prefHeight="36.0" prefWidth="217.0" text="Helps" AnchorPane.leftAnchor="68.0" AnchorPane.topAnchor="2.0">
+                                            <font>
+                                                <Font name="Arial" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="24.0" layoutY="6.0" opacity="0.7">
+                                            <image>
+                                                <Image url="@../Image/icons8-help-80.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </AnchorPane>
+                                <Label layoutX="31.0" layoutY="140.0" opacity="0.6" prefHeight="26.0" prefWidth="116.0" text="Guidelines">
+                                    <font>
+                                        <Font name="Arial" size="22.0" />
+                                    </font>
+                                </Label>
+                                <Separator layoutX="152.0" layoutY="154.0" opacity="0.15" prefHeight="0.0" prefWidth="958.0" style="-fx-background-color: black;" />
+                        <AnchorPane fx:id="paneHelp" layoutX="31.0" layoutY="176.0" opacity="0.95" prefHeight="672.0" prefWidth="1086.0" style="-fx-background-color: ffffff; -fx-background-radius: 20;">
+                           <children>
+                              <AnchorPane fx:id="paneStudRegQ" layoutX="33.0" layoutY="35.0" onMouseClicked="#lblStudRegGuidLOnMouseClicked" prefHeight="42.0" prefWidth="1017.0" style="-fx-background-color: ffffff; -fx-border-color: black; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.1;">
+                                 <children>
+                                    <Label layoutX="26.0" layoutY="5.0" opacity="0.8" prefHeight="31.0" prefWidth="385.0" text="How to add a student in this system ?">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children></AnchorPane>
+                              <AnchorPane layoutX="35.0" layoutY="100.0" prefHeight="42.0" prefWidth="1017.0" style="-fx-background-color: ffffff; -fx-border-color: black; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.1;">
+                                 <children>
+                                    <Label layoutX="26.0" layoutY="5.0" opacity="0.8" prefHeight="31.0" prefWidth="442.0" text="How to add a teacher in this system ?">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="35.0" layoutY="164.0" prefHeight="42.0" prefWidth="1017.0" style="-fx-background-color: ffffff; -fx-border-color: black; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.1;">
+                                 <children>
+                                    <Label layoutX="26.0" layoutY="5.0" opacity="0.8" prefHeight="31.0" prefWidth="442.0" text="How to add a class in this system ?">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="35.0" layoutY="234.0" prefHeight="42.0" prefWidth="1017.0" style="-fx-background-color: ffffff; -fx-border-color: black; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.1;">
+                                 <children>
+                                    <Label layoutX="26.0" layoutY="5.0" opacity="0.8" prefHeight="31.0" prefWidth="442.0" text="How to add a Employee in this system ?">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="35.0" layoutY="304.0" prefHeight="42.0" prefWidth="1017.0" style="-fx-background-color: ffffff; -fx-border-color: black; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.1;">
+                                 <children>
+                                    <Label layoutX="26.0" layoutY="5.0" opacity="0.8" prefHeight="31.0" prefWidth="442.0" text="How to check attendence in this system ?">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="37.0" layoutY="373.0" prefHeight="42.0" prefWidth="1017.0" style="-fx-background-color: ffffff; -fx-border-color: black; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.1;">
+                                 <children>
+                                    <Label layoutX="26.0" layoutY="5.0" opacity="0.8" prefHeight="31.0" prefWidth="442.0" text="How to get class fee in this system ?">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="37.0" layoutY="442.0" prefHeight="42.0" prefWidth="1017.0" style="-fx-background-color: ffffff; -fx-border-color: black; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.1;">
+                                 <children>
+                                    <Label layoutX="26.0" layoutY="5.0" opacity="0.8" prefHeight="31.0" prefWidth="442.0" text="How to pay teacher payment in this system ?">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="37.0" layoutY="506.0" prefHeight="42.0" prefWidth="1017.0" style="-fx-background-color: ffffff; -fx-border-color: black; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.1;">
+                                 <children>
+                                    <Label layoutX="26.0" layoutY="5.0" opacity="0.8" prefHeight="31.0" prefWidth="442.0" text="How to pay salary employee in this system ?">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="37.0" layoutY="570.0" prefHeight="42.0" prefWidth="1017.0" style="-fx-background-color: ffffff; -fx-border-color: black; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 0.1;">
+                                 <children>
+                                    <Label layoutX="26.0" layoutY="5.0" opacity="0.8" prefHeight="31.0" prefWidth="442.0" text="How to schedule update in this system ?">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="paneStudRegGuid" layoutX="200.0" layoutY="273.0" opacity="0.53" prefHeight="99.0" prefWidth="750.0" style="-fx-background-color: #78e08f; -fx-background-radius: 10; -fx-border-radius: 10;" visible="false">
+                           <children>
+                              <Polygon fill="#78e08f" layoutX="109.0" layoutY="-36.0" opacity="0.81" points="-57.0, 40.0, -10.0, 40.0, -35.0, 12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Ellipse layoutX="38.0" layoutY="36.0" opacity="0.59" radiusX="4.0" radiusY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                              <Text layoutX="53.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Go to the &lt; students manage &gt; then you will see the &lt; registration of a student &gt; then fill in the form below with the appropriate details.finally click on the register button." wrappingWidth="658.6708984375">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="883.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReportController">
+    <children>
+        <AnchorPane prefHeight="883.0" prefWidth="1160.0">
+            <children>
+                <ScrollPane fx:id="ScrollPane" prefHeight="900.0" prefWidth="1160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                        <AnchorPane fx:id="ScrollAnchorPane" minHeight="0.0" minWidth="0.0" onMouseClicked="#RootMainAnchorPaneOnClicked" prefHeight="900.0" prefWidth="1160.0">
+                            <children>
+                                <AnchorPane layoutX="1.0" layoutY="70.0" opacity="0.87" prefHeight="42.0" prefWidth="1143.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="70.0">
+                                    <children>
+                                        <Button layoutX="518.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="26.0" style="-fx-background-color: ffffff;" />
+                                        <Button layoutX="1076.0" layoutY="-1.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="41.0" prefWidth="57.0" style="-fx-background-color: ffffff;">
+                                            <graphic>
+                                                <ImageView fitHeight="31.0" fitWidth="40.0" opacity="0.81">
+                                                    <image>
+                                                        <Image url="@../Image/icons8-services-80.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Label layoutX="68.0" layoutY="2.0" opacity="0.6" prefHeight="36.0" prefWidth="217.0" text="Report Manage" AnchorPane.leftAnchor="68.0" AnchorPane.topAnchor="2.0">
+                                            <font>
+                                                <Font name="Arial" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="24.0" layoutY="6.0" opacity="0.7">
+                                            <image>
+                                                <Image url="@../Image/icons8-report-card-80.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </AnchorPane>
+                                <Label layoutX="26.0" layoutY="176.0" opacity="0.6" prefHeight="26.0" prefWidth="173.0" text="Income Reports">
+                                    <font>
+                                        <Font name="Arial" size="22.0" />
+                                    </font>
+                                </Label>
+                                <Separator layoutX="195.0" layoutY="188.0" opacity="0.15" prefHeight="1.0" prefWidth="915.0" style="-fx-background-color: black;" />
+                                <AnchorPane fx:id="popupPane" layoutX="26.0" layoutY="130.0" visible="false">
+                                    <children>
+                                        <AnchorPane fx:id="Popup2pane" opacity="0.3" prefHeight="37.0" prefWidth="1085.0" style="-fx-background-color: #32ff7e; -fx-background-radius: 5;">
+                                            <children>
+                                                <ImageView fx:id="SuccessImg" fitHeight="30.0" fitWidth="26.0" layoutX="9.0" layoutY="6.0" preserveRatio="true" visible="false">
+                                                    <image>
+                                                        <Image url="@../Image/mini%20icon/emojisky.com-4263.png" />
+                                                    </image>
+                                                </ImageView>
+                                                <ImageView fx:id="wrongImg" fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="5.0" preserveRatio="true" visible="false">
+                                                    <image>
+                                                        <Image url="@../Image/mini%20icon/pngegg.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </children></AnchorPane>
+                                        <Label fx:id="lblPopupText" layoutX="45.0" layoutY="7.0" opacity="0.91" prefHeight="21.0" prefWidth="399.0" textFill="#6b6868">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </AnchorPane>
+                        <AnchorPane layoutX="27.0" layoutY="234.0" prefHeight="197.0" prefWidth="344.0" style="-fx-background-color: ffffff; -fx-background-radius: 10;">
+                           <children>
+                              <JFXButton layoutX="29.0" layoutY="30.0" onAction="#btnIMPOnAction" prefHeight="31.0" prefWidth="281.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 0.2;" text="Institute Monthly Profits" />
+                              <JFXButton layoutX="29.0" layoutY="79.0" prefHeight="31.0" prefWidth="281.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 0.2;" text="Institute Annual Profits" />
+                              <JFXButton layoutX="29.0" layoutY="127.0" prefHeight="31.0" prefWidth="281.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-background-radius: 20; -fx-border-width: 0.2;" text="Monthly Teacher Payments" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="paneSelectMY" layoutX="388.0" layoutY="234.0" prefHeight="84.0" prefWidth="621.0" style="-fx-background-color: ffffff; -fx-background-radius: 10;" visible="false">
+                           <children>
+                              <JFXComboBox fx:id="combYear" focusColor="BLACK" labelFloat="true" layoutX="27.0" layoutY="27.0" prefHeight="31.0" prefWidth="215.0" promptText="Select Year" />
+                              <JFXComboBox fx:id="comboMonth" focusColor="#14161b" labelFloat="true" layoutX="266.0" layoutY="27.0" prefHeight="31.0" prefWidth="217.0" promptText="Select Month" />
+                              <JFXButton layoutX="513.0" layoutY="27.0" onAction="#btnViewOnAction" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: skyblue;" text="View" textFill="#f8f7f7">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="paneMonthlyTbl" layoutX="389.0" layoutY="331.0" prefHeight="503.0" prefWidth="550.0" style="-fx-background-color: ffffff; -fx-background-radius: 10;" visible="false">
+                           <children>
+                              <TableView fx:id="tblMonthlyIncome" layoutX="11.0" layoutY="36.0" opacity="0.8" prefHeight="459.0" prefWidth="527.0" stylesheets="@../Style/TeacherFormTableBtn.css">
+                                <columns>
+                                  <TableColumn fx:id="colmClassId" prefWidth="164.0" text="Class Id" />
+                                  <TableColumn fx:id="colmMonth" prefWidth="182.0" text="Month" />
+                                    <TableColumn fx:id="colmProfit" prefWidth="184.0" text="Profit" />
+                                </columns>
+                              </TableView>
+                              <ImageView fitHeight="29.0" fitWidth="24.0" layoutX="512.0" layoutY="8.0" opacity="0.47" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-menu-vertical-60.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="14.0" layoutY="9.0" opacity="0.59" prefHeight="21.0" prefWidth="210.0" text="Monthly Profit List" />
+                              <MenuButton layoutX="514.0" layoutY="4.0" minWidth="-Infinity" mnemonicParsing="false" opacity="0.0" prefHeight="31.0" prefWidth="22.0">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#MIncomePrintReport" text="Print Report" />
+                                </items>
+                              </MenuButton>
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

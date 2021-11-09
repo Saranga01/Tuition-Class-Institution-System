@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="883.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ClassFeesFormController">
+    <children>
+        <AnchorPane prefHeight="883.0" prefWidth="1160.0">
+            <children>
+                <ScrollPane fx:id="ScrollPane" prefHeight="1300.0" prefWidth="1160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#RootMainAnchorPaneOnClicked" prefHeight="1300.0" prefWidth="1160.0">
+                            <children>
+                                <AnchorPane fx:id="paneTable" layoutX="38.0" layoutY="750.0" prefHeight="484.0" prefWidth="1088.0" style="-fx-background-color: ffffff; -fx-background-radius: 10;" visible="false">
+                                    <children>
+                              <TableView fx:id="tblClassFees" layoutX="14.0" layoutY="48.0" opacity="0.7" prefHeight="411.0" prefWidth="1058.0" stylesheets="@../Style/TeacherFormTableBtn.css">
+                                <columns>
+                                    <TableColumn fx:id="colmFeeCode" prefWidth="122.0" text="Fee Code" />
+                                  <TableColumn fx:id="ColmSId" prefWidth="118.0" text="Student ID" />
+                                    <TableColumn fx:id="colmRYear" prefWidth="116.0" text="Relevent Year" />
+                                  <TableColumn fx:id="colmRMonth" prefWidth="148.0" text="Relevent Month" />
+                                    <TableColumn fx:id="colmPDate" prefWidth="158.0" text="Pay Date" />
+                                    <TableColumn fx:id="colmPTime" prefWidth="131.0" text="Pay Time" />
+                                    <TableColumn fx:id="colmCost" prefWidth="128.0" text="Fee Cost" />
+                                    <TableColumn fx:id="colmStatus" prefWidth="135.0" text="Status" />
+                                </columns>
+                              </TableView>
+                              <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="1046.0" layoutY="10.0" opacity="0.45">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-menu-vertical-60.png" />
+                                 </image>
+                              </ImageView>
+                              <MenuButton layoutX="1051.0" layoutY="8.0" minWidth="-Infinity" mnemonicParsing="false" opacity="0.0" prefHeight="31.0" prefWidth="18.0">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#menuItemUpdateFees" text="Update Fees      " />
+                                  <MenuItem mnemonicParsing="false" onAction="#menuItemRemoveFees" text="Remove Fees          " />
+                                    <MenuItem mnemonicParsing="false" onAction="#menuItemCotagary" text="Category Month" />
+                                    <MenuItem mnemonicParsing="false" onAction="#menuItemClear" text="All Fesses Clear" />
+                                </items>
+                              </MenuButton>
+                              <Label fx:id="lblClassName" layoutX="17.0" layoutY="23.0" prefHeight="21.0" prefWidth="423.0" text="A/L SFT 2021 BATCH" textFill="#7c7c7c">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                                    </children>
+                                </AnchorPane>
+                        <JFXButton layoutX="218.0" layoutY="550.0" onAction="#btnChangeOnAction" prefHeight="14.0" prefWidth="83.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2; -fx-background-radius: 20;" text="Change" textFill="#797373">
+                           <font>
+                              <Font name="System Bold" size="9.0" />
+                           </font>
+                        </JFXButton>
+                        <Label layoutX="316.0" layoutY="550.0" opacity="0.67" prefHeight="21.0" prefWidth="788.0" text="You can change the commission applicable to your Institute">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                                <AnchorPane layoutX="1.0" layoutY="70.0" prefHeight="42.0" prefWidth="1143.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="70.0">
+                                    <children>
+                                        <TextField focusTraversable="false" layoutX="313.0" layoutY="5.0" prefHeight="31.0" prefWidth="265.0" promptText="Check Student ID" style="-fx-background-radius: 20;" />
+                                        <Button layoutX="542.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="26.0" style="-fx-background-color: ffffff;">
+                                            <graphic>
+                                                <ImageView fitHeight="19.0" fitWidth="20.0" opacity="0.54">
+                                                    <image>
+                                                        <Image url="@../Image/icons8-search-30.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Separator layoutX="537.0" layoutY="10.0" orientation="VERTICAL" prefHeight="21.0" prefWidth="0.0" />
+                                        <Button layoutX="1076.0" layoutY="-1.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="41.0" prefWidth="57.0" style="-fx-background-color: ffffff;">
+                                            <graphic>
+                                                <ImageView fitHeight="31.0" fitWidth="40.0" opacity="0.81">
+                                                    <image>
+                                                        <Image url="@../Image/icons8-services-80.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Label layoutX="67.0" layoutY="2.0" opacity="0.6" prefHeight="36.0" prefWidth="256.0" text="Class Fees Manage" AnchorPane.leftAnchor="67.0" AnchorPane.topAnchor="2.0">
+                                            <font>
+                                                <Font name="Arial" size="26.0" />
+                                            </font>
+                                        </Label>
+                              <ImageView fitHeight="44.0" fitWidth="45.0" layoutX="14.0" opacity="0.78" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/icons8-credit-control-80.png" />
+                                 </image>
+                              </ImageView>
+                                    </children>
+                                </AnchorPane>
+                                <Label layoutX="36.0" layoutY="174.0" opacity="0.6" prefHeight="26.0" prefWidth="141.0" text="Pay class fee">
+                                    <font>
+                                        <Font name="Arial" size="22.0" />
+                                    </font>
+                                </Label>
+                                <Separator layoutX="176.0" layoutY="189.0" opacity="0.15" prefHeight="0.0" prefWidth="934.0" style="-fx-background-color: black;" />
+                                <Label layoutX="42.0" layoutY="647.0" opacity="0.6" prefHeight="26.0" prefWidth="224.0" text="Check class feeses">
+                                    <font>
+                                        <Font name="Arial" size="22.0" />
+                                    </font>
+                                </Label>
+                                <Separator layoutX="241.0" layoutY="663.0" opacity="0.15" prefHeight="0.0" prefWidth="883.0" style="-fx-background-color: black;" />
+                                <TextField fx:id="txtSearchClassId" focusTraversable="false" layoutX="38.0" layoutY="698.0" prefHeight="31.0" prefWidth="265.0" promptText="Search Class ID" style="-fx-background-radius: 5; -fx-background-radius: 20;" />
+                                <Separator layoutX="263.0" layoutY="703.0" orientation="VERTICAL" prefHeight="21.0" prefWidth="0.0" />
+                                <Button fx:id="btnSearch" layoutX="268.0" layoutY="702.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btnSearchOnMouseClicked" prefHeight="22.0" prefWidth="30.0" style="-fx-background-color: ffffff;">
+                                    <graphic>
+                                        <ImageView fitHeight="19.0" fitWidth="20.0" opacity="0.54">
+                                            <image>
+                                                <Image url="@../Image/icons8-search-30.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                                <AnchorPane fx:id="panePayClassFeeback" layoutX="27.0" layoutY="213.0" prefHeight="329.0" prefWidth="1101.0">
+                                    <children>
+                                        <AnchorPane fx:id="pieChartPane" layoutX="517.0" layoutY="18.0" prefHeight="304.0" prefWidth="263.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 0.2;" visible="false">
+                                            <children>
+                                                <Label layoutX="27.0" layoutY="9.0" opacity="0.6" prefHeight="26.0" prefWidth="214.0" text="Class Relevent Month paid Chart">
+                                                    <font>
+                                                        <Font name="Arial" size="14.0" />
+                                                    </font>
+                                                </Label>
+                                                <PieChart fx:id="PieChart" labelsVisible="false" layoutX="18.0" layoutY="38.0" opacity="0.67" prefHeight="226.0" prefWidth="232.0" />
+                                            </children>
+                                        </AnchorPane>
+                              <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="309.0" prefWidth="476.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: Skyblue; -fx-border-radius: 10; -fx-border-width: 0.5;">
+                                 <children>
+                                    <CubicCurve controlX1="-157.0" controlX2="-60.0" controlY1="23.0" controlY2="41.0" endX="-60.0" endY="-2.0" fill="#868686" layoutX="489.0" layoutY="263.0" opacity="0.6" startX="-135.0" startY="23.0" stroke="BLACK" strokeWidth="0.0" />
+                                    <JFXButton layoutX="346.0" layoutY="261.0" onAction="#btnAddFeeOnAction" opacity="0.76" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #2d3436;" text="+ADD" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXTextField fx:id="txtFClassId" focusColor="#464a57" labelFloat="true" layoutX="182.0" layoutY="40.0" opacity="0.68" prefHeight="31.0" prefWidth="244.0" promptText="Enter Class ID" />
+                                    <JFXTextField fx:id="txtFStudId" focusColor="#2f364a" labelFloat="true" layoutX="181.0" layoutY="96.0" opacity="0.68" prefHeight="31.0" prefWidth="247.0" promptText="Enter Student ID" />
+                                    <ImageView layoutX="147.0" layoutY="103.0" opacity="0.59">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/icons8-security-pass-24.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView layoutX="147.0" layoutY="47.0" opacity="0.59">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/icons8-card-security-24.png" />
+                                       </image>
+                                    </ImageView>
+                                              <JFXComboBox fx:id="combFMonth" focusColor="#2a2d36" layoutX="179.0" layoutY="205.0" opacity="0.68" prefHeight="31.0" prefWidth="251.0" promptText="Select  Relevent Month" />
+                                    <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="146.0" layoutY="213.0" opacity="0.64">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/icons8-calendar-10-24.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="91.0" fitWidth="101.0" layoutX="22.0" layoutY="39.0" opacity="0.62">
+                                       <image>
+                                          <Image url="@../Image/pngegg.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXTextField fx:id="txtFReleventYear" focusColor="#2f364a" labelFloat="true" layoutX="180.0" layoutY="154.0" opacity="0.68" prefHeight="31.0" prefWidth="247.0" promptText="Enter Relevent Year" />
+                                    <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="146.0" layoutY="160.0" opacity="0.64">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/icons8-calendar-10-24.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                        <AnchorPane fx:id="panePayForm" layoutX="287.0" layoutY="326.0" prefHeight="266.0" prefWidth="368.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: Skyblue; -fx-border-radius: 10; -fx-border-width: 0.5;" visible="false">
+                           <children>
+                              <JFXButton layoutX="259.0" layoutY="205.0" onAction="#btnPayOnAction" opacity="0.76" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #5dc244;" text="+Pay" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXRadioButton layoutX="17.0" layoutY="217.0" prefHeight="21.0" prefWidth="122.0" text="Print Paid Bill" textFill="#545454">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <Label fx:id="lblFeeID" layoutX="118.0" layoutY="14.0" opacity="0.6" prefHeight="26.0" prefWidth="141.0" text="CFEE/001">
+                                 <font>
+                                    <Font name="Arial Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="32.0" layoutY="64.0" opacity="0.6" prefHeight="26.0" prefWidth="80.0">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFClassId" layoutX="87.0" layoutY="104.0" opacity="0.6" prefHeight="26.0" prefWidth="84.0" text="CLS/001">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFStudId" layoutX="102.0" layoutY="130.0" opacity="0.6" prefHeight="26.0" prefWidth="84.0" text="STUD/001">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFMonth" layoutX="65.0" layoutY="156.0" opacity="0.6" prefHeight="26.0" prefWidth="108.0" text="January">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblFCost" layoutX="90.0" layoutY="182.0" opacity="0.6" prefHeight="26.0" prefWidth="108.0" text="1200/=">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="91.0" fitWidth="101.0" layoutX="17.0" layoutY="8.0" opacity="0.62">
+                                 <image>
+                                    <Image url="@../Image/pngegg.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="18.0" layoutY="104.0" opacity="0.6" prefHeight="26.0" prefWidth="75.0" text="Class ID :">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="18.0" layoutY="130.0" opacity="0.6" prefHeight="26.0" prefWidth="84.0" text="Student ID :">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="18.0" layoutY="156.0" opacity="0.6" prefHeight="26.0" prefWidth="60.0" text="Month :">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="18.0" layoutY="182.0" opacity="0.6" prefHeight="26.0" prefWidth="78.0" text="Fee Cost :">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="60.0" layoutY="550.0" opacity="0.63" prefHeight="21.0" prefWidth="117.0" text="Commission fee :" />
+                        <Label fx:id="lblCommiss" layoutX="175.0" layoutY="550.0" opacity="0.63" prefHeight="21.0" prefWidth="28.0" text="30" />
+                        <Label layoutX="199.0" layoutY="550.0" opacity="0.63" prefHeight="21.0" prefWidth="28.0" text="\%" />
+                        <AnchorPane fx:id="popupPane" layoutX="35.0" layoutY="129.0">
+                           <children>
+                              <AnchorPane fx:id="Popup2pane" opacity="0.3" prefHeight="37.0" prefWidth="1085.0" style="-fx-background-color: #32ff7e; -fx-background-radius: 5;">
+                                 <children>
+                                    <ImageView fx:id="SuccessImg" fitHeight="30.0" fitWidth="26.0" layoutX="9.0" layoutY="6.0" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/emojisky.com-4263.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="wrongImg" fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="5.0" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/pngegg.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <Label fx:id="lblPopupText" layoutX="45.0" layoutY="7.0" opacity="0.91" prefHeight="21.0" prefWidth="399.0" textFill="#6b6868">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="PaneCommissChange" layoutX="303.0" layoutY="570.0" prefHeight="44.0" prefWidth="278.0" visible="false">
+                           <children>
+                              <TextField fx:id="txtCommisChange" layoutX="13.0" layoutY="7.0" promptText="Commission %" style="-fx-background-radius: 20;" />
+                              <JFXButton layoutX="157.0" layoutY="7.0" onAction="#btnCommissChangeOnAction" opacity="0.78" style="-fx-background-radius: 20;" text="Set" textFill="#797676">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <Separator layoutX="155.0" layoutY="8.0" orientation="VERTICAL" prefHeight="28.0" prefWidth="0.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="paneCheckMY" layoutX="856.0" layoutY="903.0" prefHeight="160.0" prefWidth="248.0" style="-fx-background-color: ffffff; -fx-background-radius: 10; -fx-border-color: Skyblue; -fx-border-radius: 10; -fx-border-width: 0.5;" visible="false">
+                           <children>
+                                        <ComboBox fx:id="comboMonth" layoutX="21.0" layoutY="66.0" opacity="0.68" prefHeight="33.0" prefWidth="204.0" promptText="Select Month" style="-fx-background-color: ffffff; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2;" />
+                              <ComboBox fx:id="comboYear" layoutX="19.0" layoutY="20.0" opacity="0.68" prefHeight="33.0" prefWidth="207.0" promptText="Select Year" style="-fx-background-color: ffffff; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2;" />
+                              <JFXButton layoutX="135.0" layoutY="114.0" onMouseClicked="#btnCheckMYOnMouseClicked" opacity="0.63" prefHeight="20.0" prefWidth="85.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2; -fx-background-radius: 20; -fx-background-color: #2d3436;" text="Check" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="4.0" top="4.0" />
+                                 </padding>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="paneUpdateDetails" layoutX="860.0" layoutY="908.0" prefHeight="160.0" prefWidth="248.0" style="-fx-background-color: ffffff; -fx-background-radius: 10; -fx-border-color: Skyblue; -fx-border-radius: 10; -fx-border-width: 0.5;" visible="false">
+                           <children>
+                              <ComboBox fx:id="comboMonth1" layoutX="21.0" layoutY="66.0" opacity="0.68" prefHeight="33.0" prefWidth="204.0" promptText="Select Month" style="-fx-background-color: ffffff; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2;" />
+                              <ComboBox fx:id="comboYear1" layoutX="19.0" layoutY="20.0" opacity="0.68" prefHeight="33.0" prefWidth="207.0" promptText="Select Year" style="-fx-background-color: ffffff; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2;" />
+                              <JFXButton layoutX="135.0" layoutY="114.0" onMouseClicked="#btnFinalUpdateOnMouseClicked" opacity="0.63" prefHeight="20.0" prefWidth="85.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2; -fx-background-radius: 20; -fx-background-color: green;" text="Update" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="4.0" top="4.0" />
+                                 </padding>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="popupPane1" layoutX="41.0" layoutY="606.0" prefHeight="37.0" prefWidth="1075.0" visible="false">
+                           <children>
+                              <Label fx:id="lblPopupText1" layoutX="51.0" layoutY="7.0" opacity="0.91" prefHeight="22.0" prefWidth="399.0" textFill="#6b6868">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane fx:id="Popup2pane1" opacity="0.29" prefHeight="37.0" prefWidth="1077.0" style="-fx-background-color: #32ff7e; -fx-background-radius: 5;">
+                                 <children>
+                                    <ImageView fx:id="wrongImg1" fitHeight="25.0" fitWidth="25.0" layoutX="12.0" layoutY="6.0" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/pngegg.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="successImg1" fitHeight="25.0" fitWidth="28.0" layoutX="12.0" layoutY="7.0" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/emojisky.com-4263.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="paneDownColor" layoutX="771.0" layoutY="698.0" opacity="0.07" prefHeight="44.0" prefWidth="325.0" style="-fx-background-color: red; -fx-background-radius: 15;" visible="false" />
+                        <AnchorPane fx:id="paneDownErrorMsg" layoutX="765.0" layoutY="692.0" prefHeight="75.0" prefWidth="339.0" visible="false">
+                           <children>
+                              <Label fx:id="lblDownErrorMsg" layoutX="58.0" layoutY="17.0" prefHeight="21.0" prefWidth="258.0" text="Please select row and try again" textFill="#8a8787">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="24.0" fitWidth="34.0" layoutX="24.0" layoutY="15.0" opacity="0.34" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/pngegg.png" />
+                                 </image>
+                              </ImageView>
+                              <Polyline fill="RED" layoutX="321.0" layoutY="12.0" opacity="0.06" points="-16.0, 38.0, 0.0, 38.0, 0.0, 54.0, -16.0, 38.0" strokeType="INSIDE" strokeWidth="0.0" />
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

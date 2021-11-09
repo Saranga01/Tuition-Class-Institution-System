@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="883.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeFormController">
+   <children>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0">
+        <content>
+          <AnchorPane fx:id="RootMain" minHeight="0.0" minWidth="0.0" onMouseClicked="#MainOnClicked" prefHeight="883.0" prefWidth="1160.0">
+               <children>
+                  <Pane layoutX="15.0" layoutY="123.0" prefHeight="135.0" prefWidth="1115.0" style="-fx-background-radius: 20; -fx-border-color: Black; -fx-border-width: 0.2; -fx-border-radius: 20;" />
+                  <AnchorPane layoutY="57.0" opacity="0.87" prefHeight="45.0" prefWidth="1142.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <Label layoutX="68.0" layoutY="7.0" opacity="0.6" prefHeight="21.0" prefWidth="105.0" text="Home">
+                           <font>
+                              <Font name="Arial" size="26.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="29.0" fitWidth="31.0" layoutX="27.0" layoutY="7.0" opacity="0.7">
+                           <image>
+                              <Image url="@../Image/icons8-home-80.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="1077.0" layoutY="2.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="43.0" style="-fx-background-color: #ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="33.0" opacity="0.83" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/icons8-services-80.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="1025.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="44.0" prefWidth="53.0" style="-fx-background-color: ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="40.0" opacity="0.72" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/icons8-student-registration-50.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="973.0" layoutY="3.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="41.0" prefWidth="53.0" style="-fx-background-color: ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="34.0" fitWidth="39.0" opacity="0.72" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/icons8-add-user-male-50%20(1).png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <TextField fx:id="txtSearchStudentIdHome" focusTraversable="false" layoutX="150.0" layoutY="7.0" prefHeight="31.0" prefWidth="265.0" promptText="Search Student ID" style="-fx-background-radius: 20;" />
+                        <Button layoutX="379.0" layoutY="11.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#SearchSIdOnAction" prefHeight="23.0" prefWidth="26.0" style="-fx-background-color: ffffff;">
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="20.0" opacity="0.54">
+                                 <image>
+                                    <Image url="@../Image/icons8-search-30.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Separator layoutX="374.0" layoutY="12.0" orientation="VERTICAL" prefHeight="21.0" prefWidth="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="611.0" layoutY="552.0" prefHeight="306.0" prefWidth="517.0" style="-fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.1;">
+                     <children>
+                        <BarChart fx:id="barChart" barGap="0.0" categoryGap="0.0" horizontalGridLinesVisible="false" layoutX="11.0" layoutY="37.0" legendVisible="false" opacity="0.77" prefHeight="255.0" prefWidth="466.0" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" startMargin="15.0" tickLabelGap="0.0" tickLength="5.0" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" tickLabelFill="#111010" />
+                          </yAxis>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </BarChart>
+                        <Label layoutX="184.0" layoutY="11.0" opacity="0.58" prefHeight="21.0" prefWidth="181.0" text="This month registrations" textFill="#141414">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="37.0" layoutY="138.0" opacity="0.85" prefHeight="105.0" prefWidth="323.0" style="-fx-background-color: #2d3436; -fx-background-radius: 20;">
+                     <children>
+                        <Label fx:id="lblSCount" layoutX="10.0" layoutY="4.0" opacity="0.8" prefHeight="60.0" prefWidth="113.0" text="10" textFill="#eeeeee">
+                           <font>
+                              <Font name="System Bold" size="46.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="18.0" layoutY="60.0" opacity="0.82" prefHeight="21.0" prefWidth="133.0" text="Total Students" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="16.0" layoutY="95.0" opacity="0.2" prefHeight="0.0" prefWidth="289.0" />
+                        <Polyline fill="#eeeeee" layoutX="342.0" layoutY="208.0" opacity="0.21" points="-75.0, -213.25, -49.184661865234375, -207.36940002441406, -60.23871994018555, -197.5261993408203, -68.40856170654297, -161.3502655029297" rotate="97.1" stroke="#f5f5f5" strokeType="INSIDE" strokeWidth="0.0" />
+                        <ImageView fitHeight="72.0" fitWidth="71.0" layoutX="130.0" layoutY="11.0" opacity="0.15">
+                           <image>
+                              <Image url="@../Image/clipart3051769.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="408.0" layoutY="138.0" opacity="0.85" prefHeight="105.0" prefWidth="323.0" style="-fx-background-color: #2d3436; -fx-background-radius: 20;">
+                     <children>
+                        <Label fx:id="lblTCount" layoutX="9.0" layoutY="3.0" opacity="0.8" prefHeight="46.0" prefWidth="128.0" text="15" textFill="#eeeeee">
+                           <font>
+                              <Font name="System Bold" size="46.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="19.0" layoutY="61.0" opacity="0.82" prefHeight="21.0" prefWidth="125.0" text="Total Teachers" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="20.0" layoutY="96.0" opacity="0.2" prefHeight="0.0" prefWidth="282.0" />
+                        <Polyline fill="#eeeeee" layoutX="343.0" layoutY="210.0" opacity="0.21" points="-75.0, -213.25, -49.184661865234375, -207.36940002441406, -60.23871994018555, -197.5261993408203, -68.40856170654297, -161.3502655029297" rotate="96.7" stroke="#f5f5f5" strokeType="INSIDE" strokeWidth="0.0" />
+                        <ImageView fitHeight="66.0" fitWidth="97.0" layoutX="129.0" layoutY="13.0" opacity="0.15">
+                           <image>
+                              <Image url="@../Image/Daco_5115855.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="782.0" layoutY="138.0" opacity="0.85" prefHeight="105.0" prefWidth="323.0" style="-fx-background-color: #2d3436; -fx-background-radius: 20;">
+                     <children>
+                        <Label fx:id="lblCCount" layoutX="14.0" layoutY="3.0" opacity="0.8" prefHeight="51.0" prefWidth="119.0" text="30" textFill="#eeeeee">
+                           <font>
+                              <Font name="System Bold" size="46.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="17.0" layoutY="61.0" opacity="0.82" prefHeight="21.0" prefWidth="112.0" text="Total Classes" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Separator layoutX="20.0" layoutY="92.0" opacity="0.2" prefHeight="0.0" prefWidth="287.0" />
+                        <ImageView fitHeight="83.0" fitWidth="106.0" layoutX="122.0" layoutY="5.0" opacity="0.26">
+                           <image>
+                              <Image url="@../Image/transparent-class-icon-seo-and-sem-icon-people-icon-5d8e2ae6a89808.9882885015695981826906.png" />
+                           </image>
+                        </ImageView>
+                        <Polyline fill="#eeeeee" layoutX="343.0" layoutY="209.0" opacity="0.21" points="-75.0, -213.25, -49.184661865234375, -207.36940002441406, -60.23871994018555, -197.5261993408203, -68.40856170654297, -161.3502655029297" rotate="97.1" stroke="#f5f5f5" strokeType="INSIDE" strokeWidth="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="19.0" layoutY="270.0" prefHeight="324.0" prefWidth="501.0" style="-fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.1; -fx-background-color: ffffff;">
+                     <children>
+                        <JFXButton fx:id="btnYesterday" layoutX="58.0" layoutY="27.0" minHeight="-Infinity" onMouseClicked="#btnYestaday" opacity="0.75" prefHeight="21.0" prefWidth="119.0" style="-fx-border-color: black; -fx-border-width: 0.2; -fx-border-radius: 10; -fx-background-radius: 10;" text="Yestaday Classes" textFill="#4a4848">
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnToday" layoutX="189.0" layoutY="27.0" minHeight="-Infinity" onMouseClicked="#btnToday" opacity="0.75" prefHeight="21.0" prefWidth="119.0" style="-fx-border-color: black; -fx-border-width: 0.2; -fx-border-radius: 10; -fx-background-radius: 10;" text="Today Classes" textFill="#575757">
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnTomorrow" layoutX="320.0" layoutY="27.0" minHeight="-Infinity" onMouseClicked="#btnTomorrow" opacity="0.75" prefHeight="21.0" prefWidth="119.0" style="-fx-border-color: black; -fx-border-width: 0.2; -fx-border-radius: 10; -fx-background-radius: 10;" text="Tomorrow Classes" textFill="#4a4a4a">
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="11.0" />
+                           </font>
+                        </JFXButton>
+                        <TableView fx:id="tblHomeClassDate" layoutX="38.0" layoutY="63.0" opacity="0.84" prefHeight="236.0" prefWidth="424.0">
+                          <columns>
+                            <TableColumn fx:id="colmClassId" prefWidth="138.0" text="Class Id" />
+                            <TableColumn fx:id="colmTeacherId" prefWidth="156.0" text="Teacher Id" />
+                              <TableColumn fx:id="ColmTime" prefWidth="127.0" text="Time" />
+                          </columns>
+                           <stylesheets>
+                              <URL value="@../Style/TeacherFormTableBtn.css" />
+                              <URL value="@../Style/HomeTbl.css" />
+                           </stylesheets>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton layoutX="887.0" layoutY="14.0" onAction="#PayClassFeebtnOnAction" prefHeight="31.0" prefWidth="243.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2; -fx-background-radius: 20;" text="+ Pay Class Fees" textFill="#838383">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </JFXButton>
+                  <AnchorPane layoutX="536.0" layoutY="271.0" prefHeight="270.0" prefWidth="433.0" style="-fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.1; -fx-background-color: ffffff;">
+                     <children>
+                        <Label layoutX="19.0" layoutY="15.0" opacity="0.83" prefHeight="21.0" prefWidth="137.0" text="Special notice" textFill="#757575">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <JFXTextArea fx:id="txtSpecialNotice" focusColor="#333640" layoutX="16.0" layoutY="41.0" prefHeight="210.0" prefWidth="400.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 0.2;" />
+                        <JFXButton layoutX="334.0" layoutY="224.0" minHeight="-Infinity" onAction="#btnNoteClear" opacity="0.87" prefHeight="20.0" prefWidth="72.0" style="-fx-border-color: black; -fx-border-width: 0.2; -fx-border-radius: 10; -fx-background-radius: 10;" text="Clear" textFill="#545252">
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton layoutX="255.0" layoutY="224.0" minHeight="-Infinity" onMouseClicked="#btnSave" opacity="0.87" prefHeight="20.0" prefWidth="72.0" style="-fx-border-color: black; -fx-border-width: 0.2; -fx-border-radius: 10; -fx-background-radius: 10;" text="Save" textFill="#545252">
+                           <padding>
+                              <Insets bottom="2.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="RootPieChart" layoutX="23.0" layoutY="601.0" prefHeight="253.0" prefWidth="559.0" style="-fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.1;">
+                     <children>
+                        <Circle fill="WHITE" layoutX="138.0" layoutY="122.0" radius="82.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.1" style="-fx-border-color: black;" />
+                        <Circle fill="WHITE" layoutX="420.0" layoutY="123.0" radius="82.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.1" />
+                        <Label layoutX="36.0" layoutY="14.0" opacity="0.61" prefHeight="21.0" prefWidth="214.0" text="This month teacher payments " textFill="#4a4949">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <PieChart fx:id="PieChartPayments" labelsVisible="false" layoutX="16.0" layoutY="32.0" opacity="0.72" prefHeight="212.0" prefWidth="245.0" />
+                        <Label layoutX="365.0" layoutY="17.0" opacity="0.61" prefHeight="21.0" prefWidth="114.0" text="Student gender" textFill="#4a4949">
+                           <font>
+                              <Font name="Arial Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <PieChart fx:id="PieChartStudentGender" labelsVisible="false" layoutX="294.0" layoutY="34.0" opacity="0.7" prefHeight="212.0" prefWidth="252.0" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="981.0" layoutY="279.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="140.0" style="-fx-background-color: ffffff; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 0.2;">
+                     <graphic>
+                        <ImageView fitHeight="81.0" fitWidth="79.0" opacity="0.64" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/klipartz.com.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="981.0" layoutY="414.0" mnemonicParsing="false" onAction="#payment2BtnOnAction" prefHeight="119.0" prefWidth="138.0" style="-fx-background-color: ffffff; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 0.2;">
+                     <graphic>
+                        <ImageView fitHeight="91.0" fitWidth="97.0" opacity="0.85" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/pngegg.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <AnchorPane fx:id="panePayClassFeeback" layoutX="389.0" layoutY="30.0" visible="false">
+                     <children>
+                        <AnchorPane prefHeight="309.0" prefWidth="476.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: Skyblue; -fx-border-radius: 10; -fx-border-width: 0.5;">
+                           <children>
+                              <CubicCurve controlX1="-157.0" controlX2="-60.0" controlY1="23.0" controlY2="41.0" endX="-60.0" endY="-2.0" fill="#868686" layoutX="489.0" layoutY="263.0" opacity="0.6" startX="-135.0" startY="23.0" stroke="BLACK" strokeWidth="0.0" />
+                              <JFXButton layoutX="346.0" layoutY="261.0" onAction="#btnAddFeeOnAction" opacity="0.76" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #2d3436;" text="+ADD" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXTextField fx:id="txtFClassId" focusColor="#464a57" labelFloat="true" layoutX="182.0" layoutY="40.0" opacity="0.68" prefHeight="31.0" prefWidth="244.0" promptText="Enter Class ID" />
+                              <JFXTextField fx:id="txtFStudId" focusColor="#2f364a" labelFloat="true" layoutX="181.0" layoutY="96.0" opacity="0.68" prefHeight="31.0" prefWidth="247.0" promptText="Enter Student ID" />
+                              <ImageView layoutX="147.0" layoutY="103.0" opacity="0.59">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-security-pass-24.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView layoutX="147.0" layoutY="47.0" opacity="0.59">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-card-security-24.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXComboBox fx:id="combFMonth" focusColor="#2a2d36" layoutX="179.0" layoutY="205.0" opacity="0.68" prefHeight="31.0" prefWidth="251.0" promptText="Select  Relevent Month" />
+                              <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="146.0" layoutY="213.0" opacity="0.64">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-calendar-10-24.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="91.0" fitWidth="101.0" layoutX="22.0" layoutY="39.0" opacity="0.62">
+                                 <image>
+                                    <Image url="@../Image/pngegg.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXTextField fx:id="txtFReleventYear" focusColor="#2f364a" labelFloat="true" layoutX="180.0" layoutY="154.0" opacity="0.68" prefHeight="31.0" prefWidth="247.0" promptText="Enter Relevent Year" />
+                              <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="146.0" layoutY="160.0" opacity="0.64">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-calendar-10-24.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="panePayForm" layoutX="440.0" layoutY="57.0" prefHeight="266.0" prefWidth="368.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: Skyblue; -fx-border-radius: 10; -fx-border-width: 0.5;" visible="false">
+                     <children>
+                        <JFXButton layoutX="259.0" layoutY="205.0" onAction="#btnPayOnAction" opacity="0.76" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #5dc244;" text="+Pay" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXRadioButton layoutX="17.0" layoutY="217.0" prefHeight="21.0" prefWidth="122.0" text="Print Paid Bill" textFill="#545454">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </JFXRadioButton>
+                        <Label fx:id="lblFeeID" layoutX="118.0" layoutY="14.0" opacity="0.6" prefHeight="26.0" prefWidth="141.0" text="CFEE/001">
+                           <font>
+                              <Font name="Arial Bold" size="19.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="32.0" layoutY="64.0" opacity="0.6" prefHeight="26.0" prefWidth="80.0">
+                           <font>
+                              <Font name="Arial" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblFClassId" layoutX="87.0" layoutY="104.0" opacity="0.6" prefHeight="26.0" prefWidth="84.0" text="CLS/001">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblFStudId" layoutX="102.0" layoutY="130.0" opacity="0.6" prefHeight="26.0" prefWidth="84.0" text="STUD/001">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblFMonth" layoutX="65.0" layoutY="156.0" opacity="0.6" prefHeight="26.0" prefWidth="108.0" text="January">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblFCost" layoutX="90.0" layoutY="182.0" opacity="0.6" prefHeight="26.0" prefWidth="108.0" text="1200/=">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="91.0" fitWidth="101.0" layoutX="17.0" layoutY="8.0" opacity="0.62">
+                           <image>
+                              <Image url="@../Image/pngegg.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="18.0" layoutY="104.0" opacity="0.6" prefHeight="26.0" prefWidth="75.0" text="Class ID :">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="18.0" layoutY="130.0" opacity="0.6" prefHeight="26.0" prefWidth="84.0" text="Student ID :">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="18.0" layoutY="156.0" opacity="0.6" prefHeight="26.0" prefWidth="60.0" text="Month :">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="18.0" layoutY="182.0" opacity="0.6" prefHeight="26.0" prefWidth="78.0" text="Fee Cost :">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="lblNotification" layoutX="9.0" layoutY="5.0" prefHeight="21.0" prefWidth="421.0" text="Successfully Pay..!" textFill="#5bae34" visible="false" />
+                  <JFXDatePicker defaultColor="#192524" layoutX="981.0" layoutY="299.0" opacity="0.0" prefHeight="80.0" prefWidth="36.0" />
+                  <JFXDatePicker defaultColor="#192524" layoutX="1083.0" layoutY="299.0" opacity="0.0" prefHeight="80.0" prefWidth="36.0" />
+                  <JFXDatePicker defaultColor="#192524" layoutX="1047.0" layoutY="300.0" opacity="0.0" prefHeight="80.0" prefWidth="36.0" />
+                  <JFXDatePicker defaultColor="#0a1413" layoutX="1014.0" layoutY="299.0" opacity="0.0" prefHeight="80.0" prefWidth="36.0" />
+                  <AnchorPane fx:id="PaneUpdateDelete" layoutX="408.0" layoutY="107.0" prefHeight="433.0" prefWidth="566.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 0.3;" visible="false">
+                     <children>
+                        <Label fx:id="lblSId" layoutX="138.0" layoutY="138.0" opacity="0.71" prefHeight="25.0" prefWidth="127.0" text="S-001">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSGender" layoutX="155.0" layoutY="70.0" opacity="0.71" prefHeight="25.0" prefWidth="108.0" text="(male)">
+                           <font>
+                              <Font name="Arial" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="168.0" opacity="0.71" prefHeight="25.0" prefWidth="128.0" text="Trustee Name -">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSTName" layoutX="165.0" layoutY="168.0" opacity="0.71" prefHeight="25.0" prefWidth="251.0" text="H.m Gnawathi">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSName" layoutX="155.0" layoutY="44.0" opacity="0.71" prefHeight="26.0" prefWidth="403.0" text="H.M Saranga jayamal jayarathna">
+                           <font>
+                              <Font name="Arial" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="137.0" opacity="0.71" prefHeight="25.0" prefWidth="103.0" text="Student ID -">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="201.0" opacity="0.71" prefHeight="25.0" prefWidth="52.0" text="NIC -">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSNic" layoutX="82.0" layoutY="201.0" opacity="0.71" prefHeight="25.0" prefWidth="187.0" text="199825478v">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="235.0" opacity="0.71" prefHeight="25.0" prefWidth="62.0" text="Email -">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSEmail" layoutX="102.0" layoutY="235.0" opacity="0.71" prefHeight="25.0" prefWidth="236.0" text="Sara12@gmail.com">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="38.0" layoutY="269.0" opacity="0.71" prefHeight="25.0" prefWidth="89.0" text="Address -">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSAddress" layoutX="125.0" layoutY="269.0" opacity="0.71" prefHeight="25.0" prefWidth="417.0" text="No-01 Ranminigama,kendavinna medagama">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="37.0" layoutY="301.0" opacity="0.71" prefHeight="25.0" prefWidth="75.0" text="Mobile - ">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSMobile" layoutX="110.0" layoutY="301.0" opacity="0.71" prefHeight="25.0" prefWidth="116.0" text="0772197416">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="336.0" opacity="0.71" prefHeight="25.0" prefWidth="86.0" text="Birthday - ">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSBirthday" layoutX="121.0" layoutY="336.0" opacity="0.71" prefHeight="25.0" prefWidth="118.0" text="2000/12/02">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="39.0" layoutY="370.0" opacity="0.71" prefHeight="25.0" prefWidth="100.0" text="Reg Date -">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lblSRegDate" layoutX="130.0" layoutY="370.0" opacity="0.71" prefHeight="25.0" prefWidth="128.0" text="2021/10/12">
+                           <font>
+                              <Font name="Arial" size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXButton layoutX="380.0" layoutY="14.0" minHeight="-Infinity" opacity="0.83" prefHeight="23.0" prefWidth="132.0" style="-fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2;" text="Print New Card" textFill="#686868">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="1.5" />
+                           </padding>
+                        </JFXButton>
+                        <ImageView fitHeight="104.0" fitWidth="110.0" layoutX="37.0" layoutY="20.0" opacity="0.48" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/clipart1504995.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Separator layoutX="56.0" layoutY="383.0" prefHeight="0.0" prefWidth="424.0" />
+                  <Separator layoutX="195.0" layoutY="334.0" orientation="VERTICAL" prefHeight="49.0" prefWidth="0.0" />
+                  <Separator layoutX="351.0" layoutY="334.0" orientation="VERTICAL" prefHeight="49.0" prefWidth="0.0" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</StackPane>

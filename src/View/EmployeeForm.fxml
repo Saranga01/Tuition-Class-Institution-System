@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="883.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EmployeeFormController">
+    <children>
+        <AnchorPane prefHeight="883.0" prefWidth="1160.0">
+            <children>
+                <ScrollPane fx:id="ScrollPane" prefHeight="1700.0" prefWidth="1160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#RootMainAnchorPaneOnClicked" prefHeight="1700.0" prefWidth="1160.0">
+                            <children>
+                                <AnchorPane layoutY="62.0" opacity="0.87" prefHeight="42.0" prefWidth="1143.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="62.0">
+                                    <children>
+                                        <TextField focusTraversable="false" layoutX="289.0" layoutY="5.0" prefHeight="31.0" prefWidth="265.0" promptText="Search Employee" style="-fx-background-radius: 20;" />
+                                        <Button layoutX="518.0" layoutY="9.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="26.0" style="-fx-background-color: ffffff;">
+                                            <graphic>
+                                                <ImageView fitHeight="19.0" fitWidth="20.0" opacity="0.54">
+                                                    <image>
+                                                        <Image url="@../Image/icons8-search-30.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Separator layoutX="513.0" layoutY="10.0" orientation="VERTICAL" prefHeight="21.0" prefWidth="0.0" />
+                                        <Button layoutX="1076.0" layoutY="-1.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="41.0" prefWidth="57.0" style="-fx-background-color: ffffff;">
+                                            <graphic>
+                                                <ImageView fitHeight="31.0" fitWidth="40.0" opacity="0.81">
+                                                    <image>
+                                                        <Image url="@../Image/icons8-services-80.png" />
+                                                    </image>
+                                                </ImageView>
+                                            </graphic>
+                                        </Button>
+                                        <Label layoutX="70.0" layoutY="2.0" opacity="0.6" prefHeight="36.0" prefWidth="217.0" text="Employee Mange" AnchorPane.leftAnchor="70.0" AnchorPane.topAnchor="2.0">
+                                            <font>
+                                                <Font name="Arial" size="26.0" />
+                                            </font>
+                                        </Label>
+                                        <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="24.0" layoutY="6.0" opacity="0.7">
+                                            <image>
+                                                <Image url="@../Image/icons8-collaborator-female-80.png" />
+                                            </image>
+                                        </ImageView>
+                                        <JFXButton layoutX="895.0" layoutY="5.0" onMouseClicked="#btnViewAllOnMouseClicked" prefHeight="31.0" prefWidth="173.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2; -fx-background-radius: 20;" text="View All Employees" textFill="#797373">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                        </JFXButton>
+                                    </children>
+                                </AnchorPane>
+                                <Label layoutX="26.0" layoutY="180.0" opacity="0.6" prefHeight="26.0" prefWidth="227.0" text="Registration Employee">
+                                    <font>
+                                        <Font name="Arial" size="22.0" />
+                                    </font>
+                                </Label>
+                                <Separator layoutX="257.0" layoutY="192.0" opacity="0.15" prefHeight="0.0" prefWidth="853.0" style="-fx-background-color: black;" />
+                                <AnchorPane layoutX="26.0" layoutY="240.0" prefHeight="493.0" prefWidth="698.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: Black; -fx-border-radius: 10; -fx-border-width: 0.1;" AnchorPane.leftAnchor="34.0">
+                                    <children>
+                                        <CubicCurve controlX1="-157.0" controlX2="-60.0" controlY1="23.0" controlY2="41.0" endX="-60.0" endY="-2.0" fill="#868686" layoutX="254.0" layoutY="28.0" startX="-227.0" startY="29.0" stroke="BLACK" strokeWidth="0.0" />
+                                        <JFXButton layoutX="27.0" layoutY="26.0" onMouseClicked="#btnGenerateIdOnMouseClicked" opacity="0.83" prefHeight="31.0" prefWidth="167.0" style="-fx-background-color: #2d3436;" text="Genarate Employee ID" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </JFXButton>
+                                        <JFXTextField fx:id="txtEAddress" focusColor="#2d3436" labelFloat="true" layoutX="415.0" layoutY="98.0" prefHeight="31.0" prefWidth="226.0" promptText="Enter Address" unFocusColor="#aeacac" />
+                                        <JFXTextField fx:id="txtEJobTitle" focusColor="#2d3436" labelFloat="true" layoutX="61.0" layoutY="329.0" prefHeight="31.0" prefWidth="284.0" promptText="Enter Job Title" unFocusColor="#aeacac" />
+                                        <JFXTextField fx:id="txtEEmail" focusColor="#2d3436" labelFloat="true" layoutX="61.0" layoutY="248.0" prefHeight="31.0" prefWidth="285.0" promptText="Enter Email" unFocusColor="#aeacac" />
+                                        <JFXTextField fx:id="txtEName" focusColor="#2d3436" labelFloat="true" layoutX="61.0" layoutY="97.0" prefHeight="31.0" prefWidth="285.0" promptText="Enter Employee Name" unFocusColor="#aeacac" />
+                                        <JFXTextField fx:id="txtEMobile" focusColor="#2d3436" labelFloat="true" layoutX="61.0" layoutY="171.0" prefHeight="31.0" prefWidth="287.0" promptText="Enter Mobile Number" unFocusColor="#aeacac" />
+                                        <JFXTextField fx:id="txtENic" focusColor="#2d3436" labelFloat="true" layoutX="62.0" layoutY="412.0" prefHeight="31.0" prefWidth="288.0" promptText="Enter NIC" unFocusColor="#aeacac" />
+                                        <JFXButton layoutX="527.0" layoutY="439.0" onMouseClicked="#btnRegisterOnMouseClicked" opacity="0.76" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #5dc244;" text="Register" textFill="WHITE">
+                                            <font>
+                                                <Font name="System Bold" size="14.0" />
+                                            </font>
+                                        </JFXButton>
+                                        <JFXRadioButton layoutX="417.0" layoutY="391.0" prefHeight="21.0" prefWidth="168.0" text="Print employee card" textFill="#545454">
+                                            <font>
+                                                <Font name="Arial" size="14.0" />
+                                            </font>
+                                        </JFXRadioButton>
+                                        <ImageView layoutX="28.0" layoutY="102.0" opacity="0.62">
+                                            <image>
+                                                <Image url="@../Image/mini%20icon/icons8-classroom-24.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView layoutX="28.0" layoutY="175.0" opacity="0.62">
+                                            <image>
+                                                <Image url="@../Image/mini%20icon/icons8-google-mobile-24.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView layoutX="28.0" layoutY="416.0" opacity="0.62">
+                                            <image>
+                                                <Image url="@../Image/mini%20icon/icons8-identification-documents-24.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView layoutX="28.0" layoutY="252.0" opacity="0.62">
+                                            <image>
+                                                <Image url="@../Image/mini%20icon/icons8-mail-24.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView layoutX="382.0" layoutY="101.0" opacity="0.62">
+                                            <image>
+                                                <Image url="@../Image/mini%20icon/icons8-address-24.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="28.0" layoutY="331.0" opacity="0.62">
+                                            <image>
+                                                <Image url="@../Image/mini%20icon/icons8-adjective-24.png" />
+                                            </image>
+                                        </ImageView>
+                              <JFXComboBox fx:id="comboEGender" layoutX="417.0" layoutY="170.0" prefHeight="31.0" prefWidth="227.0" promptText="Gender" />
+                              <ImageView layoutX="382.0" layoutY="176.0" opacity="0.62">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-gender-24.png" />
+                                 </image>
+                              </ImageView>
+                              <AnchorPane fx:id="paneEId" layoutX="528.0" layoutY="30.0" opacity="0.82" prefHeight="25.0" prefWidth="143.0" style="-fx-background-color: #2d3436; -fx-background-radius: 20;" visible="false">
+                                 <children>
+                                    <Label fx:id="lblGenerateEID" layoutX="40.0" layoutY="2.0" prefHeight="21.0" prefWidth="96.0" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Bold" size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                        <AnchorPane fx:id="SubBackAnchorPane" layoutX="32.0" layoutY="805.0">
+                           <children>
+                                      <Label layoutX="1.0" opacity="0.6" prefHeight="26.0" prefWidth="294.0" text="Update &amp; remove employees ">
+                                          <font>
+                                              <Font name="Arial" size="22.0" />
+                                          </font>
+                                      </Label>
+                                      <Separator layoutX="296.0" layoutY="13.0" opacity="0.15" prefHeight="0.0" prefWidth="790.0" style="-fx-background-color: black;" />
+                                      <TextField fx:id="txtSearchEId" focusTraversable="false" layoutX="2.0" layoutY="51.0" prefHeight="31.0" prefWidth="265.0" promptText="Enter Employee ID" style="-fx-background-radius: 5; -fx-background-radius: 20;" />
+                                      <Separator layoutX="227.0" layoutY="56.0" orientation="VERTICAL" prefHeight="21.0" prefWidth="0.0" />
+                                      <Button layoutX="232.0" layoutY="55.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#btnSearchEDetailsOnMouseCLicked" prefHeight="22.0" prefWidth="30.0" style="-fx-background-color: ffffff;">
+                                          <graphic>
+                                              <ImageView fitHeight="19.0" fitWidth="20.0" opacity="0.54">
+                                                  <image>
+                                                      <Image url="@../Image/icons8-search-30.png" />
+                                                  </image>
+                                              </ImageView>
+                                          </graphic>
+                                      </Button>
+                                      <AnchorPane fx:id="RootUpdateDelete" layoutY="101.0" prefHeight="433.0" prefWidth="566.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 0.1;" visible="false">
+                                          <children>
+                                              <Label fx:id="lblEId" layoutX="161.0" layoutY="146.0" opacity="0.71" prefHeight="25.0" prefWidth="127.0" text="T-001">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label fx:id="lblEJob" layoutX="143.0" layoutY="66.0" opacity="0.71" prefHeight="25.0" prefWidth="108.0" text="Cashier">
+                                                  <font>
+                                                      <Font name="Arial" size="14.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label fx:id="lblEName" layoutX="142.0" layoutY="41.0" opacity="0.71" prefHeight="26.0" prefWidth="410.0" text="H.M Saranga jayamal jayarathna">
+                                                  <font>
+                                                      <Font name="Arial" size="22.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label layoutX="36.0" layoutY="145.0" opacity="0.71" prefHeight="25.0" prefWidth="120.0" text="Employee ID -">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label layoutX="36.0" layoutY="178.0" opacity="0.71" prefHeight="25.0" prefWidth="52.0" text="NIC -">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label fx:id="lblENic" layoutX="81.0" layoutY="178.0" opacity="0.71" prefHeight="25.0" prefWidth="187.0" text="199825478v">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label layoutX="36.0" layoutY="212.0" opacity="0.71" prefHeight="25.0" prefWidth="62.0" text="Email -">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label fx:id="lblEEmail" layoutX="101.0" layoutY="212.0" opacity="0.71" prefHeight="25.0" prefWidth="236.0" text="Sara12@gmail.com">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label layoutX="35.0" layoutY="246.0" opacity="0.71" prefHeight="25.0" prefWidth="89.0" text="Address -">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label fx:id="lblEAddress" layoutX="120.0" layoutY="246.0" opacity="0.71" prefHeight="25.0" prefWidth="417.0" text="No-01 Ranminigama,kendavinna medagama">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label layoutX="35.0" layoutY="278.0" opacity="0.71" prefHeight="25.0" prefWidth="75.0" text="Mobile - ">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label fx:id="lblEMobile" layoutX="109.0" layoutY="278.0" opacity="0.71" prefHeight="25.0" prefWidth="116.0" text="0772197416">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label layoutX="35.0" layoutY="313.0" opacity="0.71" prefHeight="25.0" prefWidth="86.0" text="Gender-">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label fx:id="lbElGender" layoutX="109.0" layoutY="313.0" opacity="0.71" prefHeight="25.0" prefWidth="118.0" text="male">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label layoutX="36.0" layoutY="347.0" opacity="0.71" prefHeight="25.0" prefWidth="100.0" text="Reg Date -">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <Label fx:id="lblERegDate" layoutX="128.0" layoutY="347.0" opacity="0.71" prefHeight="25.0" prefWidth="128.0" text="2021/10/12">
+                                                  <font>
+                                                      <Font name="Arial" size="18.0" />
+                                                  </font>
+                                              </Label>
+                                              <JFXButton layoutX="387.0" layoutY="12.0" minHeight="-Infinity" opacity="0.83" prefHeight="23.0" prefWidth="132.0" style="-fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2;" text="Print New Card" textFill="#686868">
+                                                  <font>
+                                                      <Font size="13.0" />
+                                                  </font>
+                                                  <padding>
+                                                      <Insets bottom="1.5" />
+                                                  </padding>
+                                              </JFXButton>
+                                    <ImageView fitHeight="26.0" fitWidth="26.0" layoutX="522.0" layoutY="12.0" opacity="0.54" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/icons8-menu-vertical-60.png" />
+                                       </image>
+                                    </ImageView>
+                                    <MenuButton layoutX="526.0" layoutY="10.0" minWidth="-Infinity" mnemonicParsing="false" opacity="0.0" prefHeight="31.0" prefWidth="19.0">
+                                       <items>
+                                          <MenuItem mnemonicParsing="false" onAction="#menuitemUpdateEmployeePane" text="Update Employee details    " />
+                                          <MenuItem mnemonicParsing="false" onAction="#menuitemRemoveEmployeePane" text="Remove Employee" />
+                                          <MenuItem mnemonicParsing="false" onAction="#menuitemPaymentEmployeePane" text="Employee Payment" />
+                                       </items>
+                                    </MenuButton>
+                                    <ImageView fitHeight="100.0" fitWidth="99.0" layoutX="34.0" layoutY="32.0" opacity="0.49" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Image/EMployee.png" />
+                                       </image>
+                                    </ImageView>
+                                          </children>
+                                      </AnchorPane>
+                              <AnchorPane fx:id="paneSalaryAdd" layoutX="575.0" layoutY="101.0" prefHeight="335.0" prefWidth="485.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: Skyblue; -fx-border-radius: 10; -fx-border-width: 0.5;" visible="false">
+                                 <children>
+                                    <JFXTextField fx:id="txtSalaryEmployeeId" focusColor="#464a57" labelFloat="true" layoutX="69.0" layoutY="42.0" opacity="0.68" prefHeight="31.0" prefWidth="244.0" promptText="Employee ID" />
+                                    <ImageView layoutX="34.0" layoutY="49.0" opacity="0.59">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/icons8-card-security-24.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXComboBox fx:id="combSalaryMonth" focusColor="#2a2d36" layoutX="68.0" layoutY="181.0" opacity="0.68" prefHeight="31.0" prefWidth="251.0" promptText="Select  Relevent Month" />
+                                    <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="35.0" layoutY="189.0" opacity="0.64">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/icons8-calendar-10-24.png" />
+                                       </image>
+                                    </ImageView>
+                                    <JFXTextField fx:id="txtSalaryReleventYear" focusColor="#2f364a" labelFloat="true" layoutX="67.0" layoutY="113.0" opacity="0.68" prefHeight="31.0" prefWidth="247.0" promptText="Enter Relevent Year" />
+                                    <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="33.0" layoutY="119.0" opacity="0.64">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/icons8-calendar-10-24.png" />
+                                       </image>
+                                    </ImageView>
+                                    <CubicCurve controlX1="-157.0" controlX2="-127.0" controlY1="23.0" controlY2="35.0" endX="-124.0" endY="-2.0" fill="#868686" layoutX="576.0" layoutY="48.0" startX="-227.0" startY="29.0" stroke="BLACK" strokeWidth="0.0" />
+                                    <JFXButton layoutX="349.0" layoutY="46.0" onMouseClicked="#btnSalaryAddOnMouseClicked" opacity="0.83" prefHeight="31.0" prefWidth="103.0" style="-fx-background-color: #2d3436;" text="+ADD" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </JFXButton>
+                                    <JFXTextField fx:id="txtSalaryCost" focusColor="#2f364a" labelFloat="true" layoutX="69.0" layoutY="245.0" opacity="0.68" prefHeight="31.0" prefWidth="247.0" promptText="Enter Salary" />
+                                    <ImageView layoutX="35.0" layoutY="250.0" opacity="0.59">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/icons8-fee-24.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <JFXButton layoutX="277.0" layoutY="50.0" onMouseClicked="#btnViewAllPaymentsOnMouseClicked" prefHeight="31.0" prefWidth="173.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2; -fx-background-radius: 20;" text="All Payments" textFill="#797373">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="popupPane" layoutX="26.0" layoutY="132.0" visible="false">
+                           <children>
+                              <AnchorPane fx:id="Popup2pane" opacity="0.3" prefHeight="37.0" prefWidth="1085.0" style="-fx-background-color: #32ff7e; -fx-background-radius: 5;">
+                                 <children>
+                                    <ImageView fx:id="SuccessImg" fitHeight="30.0" fitWidth="26.0" layoutX="9.0" layoutY="6.0" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/emojisky.com-4263.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="wrongImg" fitHeight="25.0" fitWidth="25.0" layoutX="10.0" layoutY="5.0" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/pngegg.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <Label fx:id="lblPopupText" layoutX="45.0" layoutY="7.0" opacity="0.91" prefHeight="21.0" prefWidth="399.0" textFill="#6b6868">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <TableView fx:id="tblAllEmployee" focusTraversable="false" layoutX="109.0" layoutY="116.0" opacity="0.93" prefHeight="562.0" prefWidth="960.0" stylesheets="@../Style/TeacherFormTableBtn.css" visible="false">
+                           <columns>
+                              <TableColumn fx:id="colmEmployeeId" prefWidth="152.0" text="Employee ID" />
+                              <TableColumn fx:id="colmEmployeeName" prefWidth="274.0" text="Employee Name" />
+                              <TableColumn fx:id="colmEmployeeAddress" prefWidth="352.0" text="Address" />
+                              <TableColumn fx:id="colmBtn" prefWidth="179.0" text="More Details" />
+                           </columns>
+                        </TableView>
+                        <AnchorPane fx:id="paneUpdateDetails" focusTraversable="true" layoutX="545.0" layoutY="953.0" opacity="0.9" prefHeight="648.0" prefWidth="584.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: Skyblue; -fx-border-radius: 10; -fx-border-width: 0.8;" visible="false">
+                           <children>
+                              <JFXButton layoutX="398.0" layoutY="592.0" onAction="#btnFinalUpdateOnAction" opacity="0.87" prefHeight="30.0" prefWidth="133.0" style="-fx-background-color: #5dc244;" text="Update" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXTextField fx:id="txtUpdateEName" focusColor="#161c2f" layoutX="58.0" layoutY="61.0" prefHeight="31.0" prefWidth="461.0">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtUpdateEJobTitle" focusColor="#161c2f" layoutX="60.0" layoutY="143.0" prefHeight="31.0" prefWidth="459.0">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtUpdateEEmail" focusColor="#161c2f" layoutX="56.0" layoutY="301.0" prefHeight="31.0" prefWidth="467.0">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtUpdateEAddress" focusColor="#161c2f" layoutX="56.0" layoutY="377.0" prefHeight="31.0" prefWidth="466.0">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </JFXTextField>
+                              <JFXTextField fx:id="txtUpdateENic" focusColor="#161c2f" layoutX="61.0" layoutY="223.0" prefHeight="31.0" prefWidth="462.0">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </JFXTextField>
+                              <Label layoutX="55.0" layoutY="40.0" opacity="0.71" prefHeight="25.0" prefWidth="147.0" text="Employee Name">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="60.0" layoutY="514.0" opacity="0.71" prefHeight="25.0" prefWidth="103.0" text="Gender">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="60.0" layoutY="433.0" opacity="0.71" prefHeight="25.0" prefWidth="69.0" text="Mobile">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="56.0" layoutY="356.0" opacity="0.71" prefHeight="25.0" prefWidth="103.0" text="Address">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="58.0" layoutY="200.0" opacity="0.71" prefHeight="25.0" prefWidth="103.0" text="NIC">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="57.0" layoutY="119.0" opacity="0.71" prefHeight="25.0" prefWidth="143.0" text="Job Title">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Label layoutX="57.0" layoutY="275.0" opacity="0.71" prefHeight="25.0" prefWidth="103.0" text="Email">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <JFXTextField fx:id="txtUpdateEMobile" focusColor="#161c2f" layoutX="57.0" layoutY="455.0" prefHeight="31.0" prefWidth="471.0">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </JFXTextField>
+                              <ImageView layoutX="38.0" layoutY="68.0" opacity="0.62">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-classroom-24.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="29.0" fitWidth="23.0" layoutX="39.0" layoutY="142.0" opacity="0.62">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-adjective-24.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView layoutX="39.0" layoutY="227.0" opacity="0.62">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-identification-documents-24.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView layoutX="41.0" layoutY="301.0" opacity="0.62">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-mail-24.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView layoutX="41.0" layoutY="382.0" opacity="0.62">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-address-24.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView layoutX="41.0" layoutY="459.0" opacity="0.62">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-google-mobile-24.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="530.0" layoutY="12.0" onMouseClicked="#UpdateDetailsPaneCloseMouseOnClicked" opacity="0.53">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-close-window-48.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXComboBox fx:id="comboGenderUpdate" layoutX="80.0" layoutY="536.0" prefHeight="31.0" prefWidth="453.0" />
+                              <ImageView layoutX="43.0" layoutY="540.0" opacity="0.62">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-gender-24.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="popupPane1" layoutX="31.0" layoutY="761.0" prefHeight="37.0" prefWidth="1075.0" visible="false">
+                           <children>
+                              <Label fx:id="lblPopupText1" focusTraversable="false" layoutX="51.0" layoutY="7.0" opacity="0.91" prefHeight="22.0" prefWidth="399.0" textFill="#6b6868">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <AnchorPane fx:id="Popup2pane1" opacity="0.29" prefHeight="37.0" prefWidth="1077.0" style="-fx-background-color: #32ff7e; -fx-background-radius: 5;">
+                                 <children>
+                                    <ImageView fx:id="wrongImg1" fitHeight="25.0" fitWidth="25.0" layoutX="12.0" layoutY="6.0" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/pngegg.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fx:id="successImg1" fitHeight="25.0" fitWidth="28.0" layoutX="12.0" layoutY="7.0" preserveRatio="true" visible="false">
+                                       <image>
+                                          <Image url="@../Image/mini%20icon/emojisky.com-4263.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="panePayForm" layoutX="447.0" layoutY="975.0" prefHeight="287.0" prefWidth="320.0" style="-fx-background-color: #ffffff; -fx-background-radius: 10; -fx-border-color: Skyblue; -fx-border-radius: 10; -fx-border-width: 0.5;" visible="false">
+                           <children>
+                              <JFXButton layoutX="219.0" layoutY="219.0" onAction="#btnPayOnAction" opacity="0.76" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #5dc244;" text="+Pay" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXRadioButton layoutX="14.0" layoutY="233.0" prefHeight="21.0" prefWidth="122.0" text="Print Paid Bill" textFill="#545454">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </JFXRadioButton>
+                              <Label fx:id="lblSalaryID" layoutX="118.0" layoutY="30.0" opacity="0.6" prefHeight="26.0" prefWidth="141.0" text="SLR/001">
+                                 <font>
+                                    <Font name="Arial Bold" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="32.0" layoutY="80.0" opacity="0.6" prefHeight="26.0" prefWidth="80.0">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblEmployeeId" layoutX="117.0" layoutY="120.0" opacity="0.6" prefHeight="26.0" prefWidth="84.0" text="CLS/001">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblSalaryMonth" layoutX="63.0" layoutY="145.0" opacity="0.6" prefHeight="26.0" prefWidth="108.0" text="January">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblSalaryCost" layoutX="69.0" layoutY="199.0" opacity="0.6" prefHeight="26.0" prefWidth="108.0" text="1200/=">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="91.0" fitWidth="101.0" layoutX="17.0" layoutY="24.0" opacity="0.62">
+                                 <image>
+                                    <Image url="@../Image/pngegg.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="15.0" layoutY="120.0" opacity="0.6" prefHeight="26.0" prefWidth="102.0" text="Employee ID :">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="145.0" opacity="0.6" prefHeight="26.0" prefWidth="60.0" text="Month :">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="16.0" layoutY="199.0" opacity="0.6" prefHeight="26.0" prefWidth="63.0" text="Salary :">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblSalaryYear" layoutX="61.0" layoutY="171.0" opacity="0.6" prefHeight="26.0" prefWidth="108.0" text="2021">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="171.0" opacity="0.6" prefHeight="26.0" prefWidth="60.0" text="Year :">
+                                 <font>
+                                    <Font name="Arial" size="15.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="22.0" fitWidth="25.0" layoutX="280.0" layoutY="15.0" onMouseClicked="#payFromCloseMouseOnClicked" opacity="0.58">
+                                 <image>
+                                    <Image url="@../Image/kisspng-area-trademark-symbol-brand-sign-error-5ab0d7e216a9c6.0034554915215390420928.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="PaneAllPayment" layoutX="36.0" layoutY="925.0" prefHeight="566.0" prefWidth="1075.0" style="-fx-background-color: ffffff; -fx-background-radius: 10;">
+                           <children>
+                              <TableView fx:id="tblAllPayments" layoutX="10.0" layoutY="49.0" opacity="0.75" prefHeight="507.0" prefWidth="1053.0" stylesheets="@../Style/TeacherFormTableBtn.css">
+                                 <columns>
+                                    <TableColumn fx:id="colmSalaryId" prefWidth="152.0" text="Pay Id" />
+                                    <TableColumn fx:id="colmSalaryEmployeeId" prefWidth="159.0" text="Employee Id" />
+                                    <TableColumn fx:id="colmSalaryCost" prefWidth="160.0" text="Salary" />
+                                    <TableColumn fx:id="colmSalaryRYear" prefWidth="159.0" text="Relevent Year" />
+                                    <TableColumn fx:id="colmSalaryRMonth" prefWidth="172.0" text="Relevent Month" />
+                                    <TableColumn fx:id="colmSalaryPayDate" prefWidth="172.0" text="Pay Date" />
+                                    <TableColumn fx:id="colmSalaryPayTime" prefWidth="172.0" text="Pay Time" />
+                                    <TableColumn fx:id="colmSalaryStatus" prefWidth="172.0" text="Status" />
+                                 </columns>
+                              </TableView>
+                              <ImageView fitHeight="29.0" fitWidth="28.0" layoutX="1032.0" layoutY="12.0" opacity="0.53">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/icons8-menu-vertical-60.png" />
+                                 </image>
+                              </ImageView>
+                              <MenuButton layoutX="1033.0" layoutY="11.0" minWidth="-Infinity" mnemonicParsing="false" opacity="0.0" prefHeight="31.0" prefWidth="26.0">
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#MenuItemUpdatePayment" text="Update Payment Month &amp; Year     " />
+                                  <MenuItem mnemonicParsing="false" onAction="#MenuItemCotagoryMonth" text="Category Month" />
+                                    <MenuItem mnemonicParsing="false" onAction="#MenuItemRemovePayment" text="Remove Payment" />
+                                </items>
+                              </MenuButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="paneUpdatePayment" layoutX="881.0" layoutY="1088.0" prefHeight="160.0" prefWidth="248.0" style="-fx-background-color: ffffff; -fx-background-radius: 10; -fx-border-color: Skyblue; -fx-border-radius: 10; -fx-border-width: 0.5;" visible="false">
+                           <children>
+                              <ComboBox fx:id="comboMonth1" layoutX="21.0" layoutY="66.0" opacity="0.68" prefHeight="33.0" prefWidth="204.0" promptText="Select Month" style="-fx-background-color: ffffff; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2;" />
+                              <ComboBox fx:id="comboYear1" layoutX="19.0" layoutY="20.0" opacity="0.68" prefHeight="33.0" prefWidth="207.0" promptText="Select Year" style="-fx-background-color: ffffff; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2;" />
+                              <JFXButton layoutX="135.0" layoutY="114.0" onMouseClicked="#btnFinalUpdatePaymentOnMouseClicked" opacity="0.63" prefHeight="20.0" prefWidth="85.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2; -fx-background-radius: 20; -fx-background-color: green;" text="Update" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="4.0" top="4.0" />
+                                 </padding>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="paneCheckMY" layoutX="881.0" layoutY="1088.0" prefHeight="160.0" prefWidth="248.0" style="-fx-background-color: ffffff; -fx-background-radius: 10; -fx-border-color: Skyblue; -fx-border-radius: 10; -fx-border-width: 0.5;" visible="false">
+                           <children>
+                              <ComboBox fx:id="comboMonth" layoutX="21.0" layoutY="66.0" opacity="0.68" prefHeight="33.0" prefWidth="204.0" promptText="Select Month" style="-fx-background-color: ffffff; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2;" />
+                              <ComboBox fx:id="comboYear" layoutX="19.0" layoutY="20.0" opacity="0.68" prefHeight="33.0" prefWidth="207.0" promptText="Select Year" style="-fx-background-color: ffffff; -fx-background-radius: 20; -fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2;" />
+                              <JFXButton layoutX="135.0" layoutY="114.0" onMouseClicked="#btnCheckMYOnMouseClicked" opacity="0.63" prefHeight="20.0" prefWidth="85.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-border-width: 0.2; -fx-background-radius: 20; -fx-background-color: #2d3436;" text="Check" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="4.0" top="4.0" />
+                                 </padding>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="paneDownColor" layoutX="748.0" layoutY="876.0" opacity="0.07" prefHeight="44.0" prefWidth="325.0" style="-fx-background-color: red; -fx-background-radius: 15;" visible="false" />
+                        <AnchorPane fx:id="paneDownErrorMsg" layoutX="742.0" layoutY="870.0" prefHeight="75.0" prefWidth="339.0" visible="false">
+                           <children>
+                              <Label fx:id="lblDownErrorMsg" layoutX="58.0" layoutY="17.0" prefHeight="21.0" prefWidth="258.0" text="Please select row and try again" textFill="#8a8787">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="24.0" fitWidth="34.0" layoutX="24.0" layoutY="15.0" opacity="0.34" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/mini%20icon/pngegg.png" />
+                                 </image>
+                              </ImageView>
+                              <Polyline fill="RED" layoutX="321.0" layoutY="12.0" opacity="0.06" points="-16.0, 38.0, 0.0, 38.0, 0.0, 54.0, -16.0, 38.0" strokeType="INSIDE" strokeWidth="0.0" />
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
